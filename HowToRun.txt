@@ -1,0 +1,16 @@
+- .NET Core 3.1
+
+- Open NuGet Package Manager and install (3.1.10 Version):
+  - Microsoft.EntityFrameworkCore,
+  - Microsoft.EntityFrameworkCore.SqlServer,
+  - Microsoft.EntityFrameworkCore.Tools
+
+ 
+
+- Open pakage Manager Console and add these commands:
+
+   - Add-Migration AddBooksTableToDB
+   - Update-database
+
+- Done, Its Work!!
+

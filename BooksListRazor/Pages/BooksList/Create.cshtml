@@ -1,0 +1,54 @@
+﻿@page
+@model BooksListRazor.Pages.BooksList.CreateModel
+@{
+}
+<br />
+<h2 class="text-info">Create New Book </h2>
+<div class="container border" style="padding:30px">
+    <form method="post">
+
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Name"></label>
+            </div>
+            <div class="col-9">
+                <input class="form-control" asp-for="Book.Name" />
+                <span class="text-danger" asp-validation-for="Book.Name"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.Author"></label>
+            </div>
+            <div class="col-9">
+                <input class="form-control" asp-for="Book.Author" />
+                <span class="text-danger" asp-validation-for="Book.Author"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-3">
+                <label asp-for="Book.ISBN"></label>
+            </div>
+            <div class="col-9">
+                <input class="form-control" asp-for="Book.ISBN" />
+                <span class="text-danger" asp-validation-for="Book.ISBN"></span>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" class="btn btn-success form-control" value="Create" />
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" class="btn btn-primary form-control">Back To List</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
